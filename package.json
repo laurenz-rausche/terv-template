@@ -6,7 +6,22 @@
   "author": "__PROJECT_AUTH__",
   "license": "MIT",
   "private": false,
-  "scripts": {},
+  "scripts": {
+    "format:client": "",
+    "format:server": "",
+    "format:full": "",
+    "build:clean": "rimraf out",
+    "build:client": "cd client && npm run build:full",
+    "build:server": "cd server && npm run build:full",
+    "build:full": "npm run build:clean && npm run build:server && npm run build:client",
+    "dev:remove": "rimraf node_modules yarn.lock package-lock.json",
+    "dev:client": "cd client && npm run dev:start",
+    "dev:server": "cd server && npm run dev:start",
+    "dev:start": "concurrently \"npm:dev:client\" \"npm:dev:server\""
+  },
   "dependencies": {},
-  "devDependencies": {}
+  "devDependencies": {
+    "concurrently": "^8.0.1",
+    "rimraf": "^5.0.0"
+  }
 }

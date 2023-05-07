@@ -10,7 +10,7 @@
   "scripts": {
     "build:clean": "rimraf dist",
     "build:compile": "npm run dev:format && npm run build:clean && tsc",
-    "build:copy": "",
+    "build:copy": "rimraf ../out/server/* && recursive-copy dist ../out/server/dist && recursive-copy package.json ../out/server/package.json && recursive-copy views ../out/server/views",
     "build:full": "npm run build:compile && npm run build:copy && npm run build:clean",
     "console:clear": "node -e \"console.clear()\"",
     "dev:format": "",

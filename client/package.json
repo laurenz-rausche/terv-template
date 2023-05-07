@@ -10,7 +10,7 @@
   "scripts": {
     "build:clean": "rimraf dist",
     "build:compile": "npm run dev:format && npm run build:clean && tsc && vite build",
-    "build:copy": "",
+    "build:copy": "rimraf ../out/client/* && recursive-copy dist ../out/client/dist",
     "build:full": "npm run build:compile && npm run build:copy && npm run build:clean",
     "console:clear": "node -e \"console.clear()\"",
     "dev:format": "",
@@ -26,6 +26,7 @@
     "@types/react-dom": "^18.2.4",
     "@vitejs/plugin-react": "^4.0.0",
     "cross-env": "^7.0.3",
+    "recursive-copy-cli": "^1.0.20",
     "typescript": "^5.0.4",
     "vite": "^4.3.5"
   }
