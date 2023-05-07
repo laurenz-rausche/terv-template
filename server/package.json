@@ -1,5 +1,5 @@
 {
-  "name": "__PROJECT_DESC__-server",
+  "name": "__PROJECT_NAME__-server",
   "version": "0.0.1",
   "description": "__PROJECT_DESC__ [server]",
   "repository": "__PROJECT_REPO__",
