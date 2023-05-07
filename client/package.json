@@ -8,13 +8,13 @@
   "private": false,
   "type": "module",
   "scripts": {
-    "build:clean": "",
-    "build:compile": "",
+    "build:clean": "rimraf dist",
+    "build:compile": "npm run dev:format && npm run build:clean && tsc && vite build",
     "build:copy": "",
-    "build:full": "",
-    "console:clear": "",
+    "build:full": "npm run build:compile && npm run build:copy && npm run build:clean",
+    "console:clear": "node -e \"console.clear()\"",
     "dev:format": "",
-    "dev:remove": "",
+    "dev:remove": "rimraf node_modules yarn.lock package-lock.json",
     "dev:start": "npm run console:clear && cross-env NODE_ENV=development vite --host"
   },
   "dependencies": {
