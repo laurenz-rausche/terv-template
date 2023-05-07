@@ -15,8 +15,18 @@
     "console:clear": "",
     "dev:format": "",
     "dev:remove": "",
-    "dev:start": ""
+    "dev:start": "npm run console:clear && cross-env NODE_ENV=development vite --host"
   },
-  "dependencies": {},
-  "devDependencies": {}
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.6",
+    "@types/react-dom": "^18.2.4",
+    "@vitejs/plugin-react": "^4.0.0",
+    "cross-env": "^7.0.3",
+    "typescript": "^5.0.4",
+    "vite": "^4.3.5"
+  }
 }
