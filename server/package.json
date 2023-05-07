@@ -9,9 +9,9 @@
   "main": "dist/index.js",
   "scripts": {
     "build:clean": "rimraf dist",
-    "build:compile": "npm run build:clean && tsc",
+    "build:compile": "npm run dev:format && npm run build:clean && tsc",
     "build:copy": "",
-    "build:full": "npm run dev:format && npm run build:compile && npm run build:copy && npm run build:clean",
+    "build:full": "npm run build:compile && npm run build:copy && npm run build:clean",
     "console:clear": "node -e \"console.clear()\"",
     "dev:format": "",
     "dev:remove": "rimraf node_modules yarn.lock package-lock.json",
