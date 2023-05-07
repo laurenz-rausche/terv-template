@@ -17,7 +17,7 @@
     "dev:remove": "rimraf node_modules yarn.lock package-lock.json",
     "dev:client": "cd client && npm run dev:start",
     "dev:server": "cd server && npm run dev:start",
-    "dev:start": "concurrently \"npm:dev:client\" \"npm:dev:server\""
+    "dev:start": "concurrently --kill-others \"npm:dev:client\" \"npm:dev:server\""
   },
   "dependencies": {},
   "devDependencies": {
