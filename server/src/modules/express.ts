@@ -7,7 +7,7 @@ import { cwd } from "process";
 import { env } from "../utils/env";
 
 //static serve paths
-const DIST_PATH = join(cwd(), "..", "client", "dist");
+const DIST_PATH = join(cwd(), "client");
 const PUBLIC_PATH = join(cwd(), "..", "client", "public");
 
 //create the express app

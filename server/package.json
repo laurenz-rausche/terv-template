@@ -1,7 +1,7 @@
 {
-  "name": "__PROJECT_NAME__-server",
+  "name": "__PROJECT_NAME__",
   "version": "0.0.1",
-  "description": "__PROJECT_DESC__ [server]",
+  "description": "__PROJECT_DESC__",
   "repository": "__PROJECT_REPO__",
   "author": "__PROJECT_AUTH__",
   "license": "MIT",
@@ -10,7 +10,7 @@
   "scripts": {
     "build:clean": "rimraf dist",
     "build:compile": "npm run dev:format && npm run build:clean && tsc",
-    "build:copy": "rimraf ../out/server/* && recursive-copy dist ../out/server/dist && recursive-copy package.json ../out/server/package.json && recursive-copy views ../out/server/views",
+    "build:copy": "rimraf ../out/dist/ ../out/views ../out/package.json ../out/node_modules ../out/yarn.lock ../out/package-lock.json && recursive-copy dist ../out/dist && recursive-copy package.json ../out/package.json && recursive-copy views ../out/views",
     "build:full": "npm run build:compile && npm run build:copy && npm run build:clean",
     "console:clear": "node -e \"console.clear()\"",
     "dev:format": "",

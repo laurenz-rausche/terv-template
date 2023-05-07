@@ -26,7 +26,7 @@ const parseManifest = async () => {
   if (env("NODE_ENV") !== "production") return {};
 
   //get path of the manifest
-  const MANIFET_PATH = join(cwd(), "..", "client", "dist", "manifest.json");
+  const MANIFET_PATH = join(cwd(), "client", "manifest.json");
 
   //get contents of manifest
   const manifestData = (await readFile(MANIFET_PATH)).toString();
