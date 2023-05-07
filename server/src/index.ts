@@ -1,1 +1,2 @@
-console.log("test");
+//load http server
+import "./modules/httpServer";
