@@ -1,0 +1,12 @@
+{
+  "name": "__PROJECT_NAME__",
+  "version": "0.0.1",
+  "description": "__PROJECT_DESC__",
+  "repository": "__PROJECT_REPO__",
+  "author": "__PROJECT_AUTH__",
+  "license": "MIT",
+  "private": false,
+  "scripts": {},
+  "dependencies": {},
+  "devDependencies": {}
+}
