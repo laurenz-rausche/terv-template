@@ -1,0 +1,13 @@
+{
+  "name": "__PROJECT_DESC__-server",
+  "version": "0.0.1",
+  "description": "__PROJECT_DESC__ [server]",
+  "repository": "__PROJECT_REPO__",
+  "author": "__PROJECT_AUTH__",
+  "license": "MIT",
+  "private": false,
+  "main": "dist/index.js",
+  "scripts": {},
+  "dependencies": {},
+  "devDependencies": {}
+}
