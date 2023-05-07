@@ -1,0 +1,22 @@
+{
+  "name": "__PROJECT_NAME__-client",
+  "version": "0.0.1",
+  "description": "__PROJECT_DESC__ [client]",
+  "repository": "__PROJECT_REPO__",
+  "author": "__PROJECT_AUTH__",
+  "license": "MIT",
+  "private": false,
+  "type": "module",
+  "scripts": {
+    "build:clean": "",
+    "build:compile": "",
+    "build:copy": "",
+    "build:full": "",
+    "console:clear": "",
+    "dev:format": "",
+    "dev:remove": "",
+    "dev:start": ""
+  },
+  "dependencies": {},
+  "devDependencies": {}
+}
