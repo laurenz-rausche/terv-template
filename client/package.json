@@ -1,0 +1,34 @@
+{
+  "name": "__PROJECT_NAME__",
+  "version": "0.0.1",
+  "description": "__PROJECT_DESC__",
+  "repository": "__PROJECT_REPO__",
+  "author": "__PROJECT_AUTH__",
+  "license": "MIT",
+  "private": false,
+  "type": "module",
+  "scripts": {
+    "build:clean": "rimraf dist",
+    "build:compile": "npm run dev:format && npm run build:clean && tsc && vite build",
+    "build:copy": "rimraf ../out/client && recursive-copy dist ../out/client",
+    "build:full": "npm run build:compile && npm run build:copy && npm run build:clean",
+    "console:clear": "node -e \"console.clear()\"",
+    "dev:format": "prettier --write --config ../.prettierrc.json src",
+    "dev:remove": "rimraf node_modules yarn.lock package-lock.json",
+    "dev:start": "npm run console:clear && cross-env NODE_ENV=development vite --host"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.6",
+    "@types/react-dom": "^18.2.4",
+    "@vitejs/plugin-react": "^4.0.0",
+    "cross-env": "^7.0.3",
+    "prettier": "^2.8.8",
+    "recursive-copy-cli": "^1.0.20",
+    "typescript": "^5.0.4",
+    "vite": "^4.3.5"
+  }
+}

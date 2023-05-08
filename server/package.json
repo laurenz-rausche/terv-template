@@ -1,0 +1,36 @@
+{
+  "name": "__PROJECT_NAME__",
+  "version": "0.0.1",
+  "description": "__PROJECT_DESC__",
+  "repository": "__PROJECT_REPO__",
+  "author": "__PROJECT_AUTH__",
+  "license": "MIT",
+  "private": false,
+  "main": "dist/index.js",
+  "scripts": {
+    "build:clean": "rimraf dist",
+    "build:compile": "npm run dev:format && npm run build:clean && tsc",
+    "build:copy": "rimraf ../out/dist/ ../out/views ../out/package.json ../out/node_modules ../out/yarn.lock ../out/package-lock.json && recursive-copy dist ../out/dist && recursive-copy package.json ../out/package.json && recursive-copy views ../out/views",
+    "build:full": "npm run build:compile && npm run build:copy && npm run build:clean",
+    "console:clear": "node -e \"console.clear()\"",
+    "dev:format": "prettier --write --config ../.prettierrc.json src",
+    "dev:remove": "rimraf node_modules yarn.lock package-lock.json",
+    "dev:start": "npm run console:clear && cross-env NODE_ENV=development ts-node-dev --require=dotenv/config --respawn --clear --watch .env src/index.ts",
+    "start": "node ."
+  },
+  "dependencies": {
+    "ejs": "^3.1.9",
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.17",
+    "@types/node": "^20.1.0",
+    "cross-env": "^7.0.3",
+    "dotenv": "^16.0.3",
+    "prettier": "^2.8.8",
+    "recursive-copy-cli": "^1.0.20",
+    "rimraf": "^5.0.0",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.0.4"
+  }
+}
