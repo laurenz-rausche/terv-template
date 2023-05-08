@@ -43,5 +43,20 @@ replace({
   to: name,
 });
 
+//replace heading (README.md)
+replace({
+  files: join(__dirname, "..", "README.md"),
+  from: /__PROJECT_NAME__/g,
+  to: name,
+});
+
+
+//replace description (README.md)
+replace({
+  files: join(__dirname, "..", "README.md"),
+  from: /__PROJECT_DESC__/g,
+  to: desc,
+});
+
 //warn user to change git url
 console.log("Remember to change your git URL!")
