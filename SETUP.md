@@ -4,5 +4,5 @@ A template for all types of applications with an express backend and a react (vi
 - [x] implement api on app for example purposes (/api/v1/ping)
 - [X] setup script
 - [X] formatting
-- [ ] sort imports
+- [X] sort imports
 - [ ] documentation
