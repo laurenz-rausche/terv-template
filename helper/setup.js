@@ -42,3 +42,6 @@ replace({
   from: /__PROJECT_NAME__/g,
   to: name,
 });
+
+//warn user to change git url
+console.log("Remember to change your git URL!")
