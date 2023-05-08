@@ -56,6 +56,3 @@ replace({
   from: /__PROJECT_DESC__/g,
   to: desc,
 });
-
-//warn user to change git url
-console.log("Remember to change your git URL!");
