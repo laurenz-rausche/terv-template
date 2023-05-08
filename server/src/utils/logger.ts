@@ -16,7 +16,7 @@ export function log(level: LogLevels, message: any) {
     //log if active
     console.log(
       `[${level.toLocaleUpperCase()}] ${new Date().toLocaleTimeString()}`,
-      message
+      message,
     );
   }
 }

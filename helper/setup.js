@@ -50,7 +50,6 @@ replace({
   to: name,
 });
 
-
 //replace description (README.md)
 replace({
   files: join(__dirname, "..", "README.md"),
@@ -59,4 +58,4 @@ replace({
 });
 
 //warn user to change git url
-console.log("Remember to change your git URL!")
+console.log("Remember to change your git URL!");

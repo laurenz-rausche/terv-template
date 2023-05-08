@@ -1,8 +1,8 @@
 import { Router } from "express";
+import { readFile } from "fs/promises";
 import { join } from "path";
 import { cwd } from "process";
 import { env } from "../utils/env";
-import { readFile } from "fs/promises";
 
 //create the home router
 export const homeRouter = Router();

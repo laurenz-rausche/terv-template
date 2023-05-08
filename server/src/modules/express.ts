@@ -1,9 +1,9 @@
 import express from "express";
-import { homeRouter } from "../routers/homeRouter";
-import { apiRouter } from "../routers/apiRouter";
-import assetRouter from "../routers/assetRouter";
 import { join } from "path";
 import { cwd } from "process";
+import { apiRouter } from "../routers/apiRouter";
+import assetRouter from "../routers/assetRouter";
+import { homeRouter } from "../routers/homeRouter";
 import { env } from "../utils/env";
 
 //static serve paths

@@ -5,12 +5,12 @@ export function env(name: string, required: true, fallback?: string): string;
 export function env(
   name: string,
   required: boolean | undefined,
-  fallback: string
+  fallback: string,
 ): string;
 export function env(
   name: string,
   required?: boolean,
-  fallback?: string
+  fallback?: string,
 ): string | undefined;
 
 //env wrapper function
@@ -25,7 +25,7 @@ export function env(name: string, required?: boolean, fallback?: string) {
       //log error
       log(
         "error",
-        `ENV-Var "${name}" is not set, required and has no fallback!`
+        `ENV-Var "${name}" is not set, required and has no fallback!`,
       );
 
       //exit process with error code 1
@@ -35,7 +35,7 @@ export function env(name: string, required?: boolean, fallback?: string) {
     //log warning
     log(
       "warn",
-      `ENV-Var "${name}" is not set, required but uses fallback value of "${fallback}"!`
+      `ENV-Var "${name}" is not set, required but uses fallback value of "${fallback}"!`,
     );
   }
 
