@@ -7,9 +7,9 @@
   "license": "MIT",
   "private": false,
   "scripts": {
-    "format:client": "",
-    "format:server": "",
-    "format:full": "",
+    "format:client": "cd client && npm run dev:format",
+    "format:server": "cd server && npm run dev:format",
+    "format:full": "npm run format:server && npm run format:client",
     "build:clean": "rimraf out",
     "build:client": "cd client && npm run build:full",
     "build:server": "cd server && npm run build:full",

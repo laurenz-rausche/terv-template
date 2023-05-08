@@ -13,7 +13,7 @@
     "build:copy": "rimraf ../out/client && recursive-copy dist ../out/client",
     "build:full": "npm run build:compile && npm run build:copy && npm run build:clean",
     "console:clear": "node -e \"console.clear()\"",
-    "dev:format": "",
+    "dev:format": "prettier --write --config ../.prettierrc.json src",
     "dev:remove": "rimraf node_modules yarn.lock package-lock.json",
     "dev:start": "npm run console:clear && cross-env NODE_ENV=development vite --host"
   },
@@ -26,6 +26,7 @@
     "@types/react-dom": "^18.2.4",
     "@vitejs/plugin-react": "^4.0.0",
     "cross-env": "^7.0.3",
+    "prettier": "^2.8.8",
     "recursive-copy-cli": "^1.0.20",
     "typescript": "^5.0.4",
     "vite": "^4.3.5"
