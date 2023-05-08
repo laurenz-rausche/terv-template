@@ -1,0 +1,30 @@
+{
+  "name": "__PROJECT_NAME__",
+  "version": "0.0.1",
+  "description": "__PROJECT_DESC__",
+  "repository": "__PROJECT_REPO__",
+  "author": "__PROJECT_AUTH__",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "format:client": "cd client && npm run dev:format",
+    "format:server": "cd server && npm run dev:format",
+    "format:full": "npm run format:server && npm run format:client",
+    "build:clean": "rimraf out",
+    "build:client": "cd client && npm run build:full",
+    "build:server": "cd server && npm run build:full",
+    "build:full": "npm run build:clean && npm run build:server && npm run build:client",
+    "dev:remove": "rimraf node_modules yarn.lock package-lock.json",
+    "dev:client": "cd client && npm run dev:start",
+    "dev:server": "cd server && npm run dev:start",
+    "dev:start": "concurrently --kill-others \"npm:dev:client\" \"npm:dev:server\""
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@types/node": "^20.1.0",
+    "concurrently": "^8.0.1",
+    "prompt-sync": "^4.2.0",
+    "replace-in-file": "^6.3.5",
+    "rimraf": "^5.0.0"
+  }
+}
